@@ -2,10 +2,10 @@ import React from 'react';
 
 const Add = () => {
   return (
-    <>
+    <div class="col-md-6 mb-4">
       <h1>React Blog</h1>
       <form>
-        <div>
+        <div class="mb-2">
           <select class="form-select" aria-label="User select">
             <option selected>Select the user</option>
             <option value="1">1 - Leanne Graham</option>
@@ -13,7 +13,7 @@ const Add = () => {
             <option value="3">3 - Clementine Bauch</option>
           </select>
         </div>
-        <div>
+        <div class="mb-2">
           <label for="postTitle" class="form-label">
             Post Title
           </label>
@@ -24,19 +24,20 @@ const Add = () => {
             aria-describedby="Help"
           />
         </div>
-        <div>
+        <div class="mb-3">
           <label for="contentInput" class="form-label">
             Blog Post
           </label>
           <textarea class="form-control" id="contentInput" rows="3"></textarea>
         </div>
+
         <div>
           <button type="submit" class="btn btn-primary">
             New Post
           </button>
         </div>
       </form>
-    </>
+    </div>
   );
 };
 

@@ -5,9 +5,11 @@ import './style.css';
 
 export default function App() {
   return (
-    <div className="container">
-      <Add />
-      <Edit />
+    <div class="container">
+        <div class="row">
+          <Add />
+          <Edit />
+        </div>
     </div>
   );
 }
