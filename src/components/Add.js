@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button'
 
 const Add = () => {
   return (
@@ -32,9 +33,7 @@ const Add = () => {
         </div>
 
         <div>
-          <button type="submit" class="btn btn-primary">
-            New Post
-          </button>
+          <Button />
         </div>
       </form>
     </div>
