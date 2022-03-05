@@ -36,6 +36,8 @@ export default function App() {
   const addPost = (user) => {
     const id = Math.floor(Math.random() *10000) + 1
 
+    console.log(user)
+
     const newUser = { id, ...user }
     setUsers([...users, newUser])
   }

@@ -29,17 +29,15 @@ const Add = ({ onAdd }) => {
       <form action="" className="add-form" onSubmit={onSubmit}>
         <div className="form-control">
           <div class="mb-2">
-            <select class="form-select" aria-label="User select">
+            <select
+              class="form-select"
+              aria-label="User select"
+              onChange={(e) => setName(e.target.value)}
+            >
               <option selected>Select the user</option>
-              <option value={name} onChange={(e) => setName(e.target.value)}>
-                1 - Leanne Graham
-              </option>
-              <option value={name} onChange={(e) => setName(e.target.value)}>
-                2 - Ervin Howell
-              </option>
-              <option value={name} onChange={(e) => setName(e.target.value)}>
-                3 - Clementine Bauch
-              </option>
+              <option value="Leanne Graham">1 - Leanne Graham</option>
+              <option value="Ervin Howell">2 - Ervin Howell</option>
+              <option value="Clementine Bauch">3 - Clementine Bauch</option>
             </select>
           </div>
           <div class="mb-2">
