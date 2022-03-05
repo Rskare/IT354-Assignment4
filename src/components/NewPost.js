@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Button = () => {
+const NewPost = () => {
   return (
     <button type="submit" className="btn btn-primary">
       New Post
@@ -8,4 +8,4 @@ const Button = () => {
   );
 };
 
-export default Button;
+export default NewPost;

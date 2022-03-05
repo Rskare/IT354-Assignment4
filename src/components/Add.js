@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './Button';
+import NewPost from './NewPost';
 import { useState } from 'react';
 
 const Add = ({ onAdd }) => {
@@ -69,7 +69,7 @@ const Add = ({ onAdd }) => {
           </div>
 
           <div>
-            <Button />
+            <NewPost />
           </div>
         </div>
       </form>
