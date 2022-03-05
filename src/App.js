@@ -33,11 +33,15 @@ export default function App() {
     },
   ]);
 
+  const deletePost = (id) => {
+    setUsers(users.filter((user) => user.id !== id))
+  }
+
   return (
     <div class="container">
         <div class="row">
           <Add />
-          <Edit users={users}/>
+          {users.length > 0 ? <Edit users={users} onDelete={deletePost}/> : 'No Users To Show'}
         </div>
     </div>
   );

@@ -1,14 +1,14 @@
 import React from 'react';
 import Button2 from './Button2';
 
-const Post = ({ user }) => {
+const Post = ({ user, onDelete }) => {
   return (
     <div class="row mb-3">
           <div class="col-4">
             <h4>{user.title}</h4>
           </div>
           <div class="col-8">
-            <Button2 />
+            <Button2 onDelete={onDelete} user={user}/>
           </div>
           <div class="col-12">
             <p>By {user.user}</p>

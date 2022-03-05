@@ -1,11 +1,11 @@
 import React from 'react';
 import Post from './Post';
 
-const Edit = ({ users }) => {
+const Edit = ({ users, onDelete }) => {
   return (
     <>
       {users.map((user) => (
-        <Post user={user} />
+        <Post user={user} onDelete={onDelete} />
       ))}
     </>
   );
