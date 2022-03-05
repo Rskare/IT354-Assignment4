@@ -11,7 +11,7 @@ const Post = ({ user, onDelete }) => {
             <Button2 onDelete={onDelete} user={user}/>
           </div>
           <div class="col-12">
-            <p>By {user.user}</p>
+            <p>By {user.name}</p>
             <p>{user.text}</p>
           </div>
         </div>

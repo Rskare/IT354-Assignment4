@@ -9,29 +9,36 @@ export default function App() {
   const [users, setUsers] = useState([
     {
       id: 1,
-      user: 'Username',
+      name: 'Username',
       title: 'Title',
       text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex dolores, velit est blanditiis, quo ducimus voluptatum fuga ipsum laboriosam quidem ut magni veritatis, optio neque quas tempora quisquam nihil ab',
     },
     {
       id: 2,
-      user: 'Username',
+      name: 'Username',
       title: 'Title',
       text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex dolores, velit est blanditiis, quo ducimus voluptatum fuga ipsum laboriosam quidem ut magni veritatis, optio neque quas tempora quisquam nihil ab',
     },
     {
       id: 3,
-      user: 'Username',
+      name: 'Username',
       title: 'Title',
       text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex dolores, velit est blanditiis, quo ducimus voluptatum fuga ipsum laboriosam quidem ut magni veritatis, optio neque quas tempora quisquam nihil ab',
     },
     {
       id: 4,
-      user: 'Username',
+      name: 'Username',
       title: 'Title',
       text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex dolores, velit est blanditiis, quo ducimus voluptatum fuga ipsum laboriosam quidem ut magni veritatis, optio neque quas tempora quisquam nihil ab',
     },
   ]);
+
+  const addPost = (user) => {
+    const id = Math.floor(Math.random() *10000) + 1
+
+    const newUser = { id, ...user }
+    setUsers([...users, newUser])
+  }
 
   const deletePost = (id) => {
     setUsers(users.filter((user) => user.id !== id))
@@ -40,7 +47,7 @@ export default function App() {
   return (
     <div class="container">
         <div class="row">
-          <Add />
+          <Add onAdd={addPost}/>
           {users.length > 0 ? <Edit users={users} onDelete={deletePost}/> : 'No Users To Show'}
         </div>
     </div>
