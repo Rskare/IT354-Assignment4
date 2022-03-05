@@ -3,7 +3,7 @@ import Button from './Button';
 import { useState } from 'react';
 
 const Add = ({ onAdd }) => {
-  const [userId, setUserId] = useState('');
+  const [name, setName] = useState('');
   const [title, setTitle] = useState('');
   const [text, setText] = useState('');
 
@@ -15,9 +15,9 @@ const Add = ({ onAdd }) => {
       return;
     }
 
-    onAdd({ userId, title, text });
+    onAdd({ name, title, text });
 
-    setUserId('');
+    setName('');
     setTitle('');
     setText('');
   };
@@ -31,9 +31,15 @@ const Add = ({ onAdd }) => {
           <div class="mb-2">
             <select class="form-select" aria-label="User select">
               <option selected>Select the user</option>
-              <option value="1">1 - Leanne Graham</option>
-              <option value="2">2 - Ervin Howell</option>
-              <option value="3">3 - Clementine Bauch</option>
+              <option value={name} onChange={(e) => setName(e.target.value)}>
+                1 - Leanne Graham
+              </option>
+              <option value={name} onChange={(e) => setName(e.target.value)}>
+                2 - Ervin Howell
+              </option>
+              <option value={name} onChange={(e) => setName(e.target.value)}>
+                3 - Clementine Bauch
+              </option>
             </select>
           </div>
           <div class="mb-2">
